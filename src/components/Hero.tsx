@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Users, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
@@ -23,8 +24,8 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                Start Helping Today
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6" asChild>
+                <Link to="/home">Start Helping Today</Link>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6">
                 Learn Our Mission

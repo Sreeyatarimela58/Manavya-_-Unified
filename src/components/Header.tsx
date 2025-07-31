@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Menu } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,8 +33,12 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost">Sign In</Button>
-            <Button variant="warm">Get Started</Button>
+            <Button variant="ghost" asChild>
+              <Link to="/home">Sign In</Link>
+            </Button>
+            <Button variant="warm" asChild>
+              <Link to="/home">Get Started</Link>
+            </Button>
           </div>
 
           <button 
@@ -60,8 +65,12 @@ const Header = () => {
                 Contact
               </a>
               <div className="flex flex-col gap-2 pt-4">
-                <Button variant="ghost" className="justify-start">Sign In</Button>
-                <Button variant="warm" className="justify-start">Get Started</Button>
+                <Button variant="ghost" className="justify-start" asChild>
+                  <Link to="/home">Sign In</Link>
+                </Button>
+                <Button variant="warm" className="justify-start" asChild>
+                  <Link to="/home">Get Started</Link>
+                </Button>
               </div>
             </nav>
           </div>
